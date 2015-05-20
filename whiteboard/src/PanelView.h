@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PanelView : UIView
+@protocol PanelProtocol <NSObject>
+- (void)changeColor: (UIColor*)color;
+- (void)changeLineWidth: (CGFloat)width;
+- (void)changeAlpha: (CGFloat)alpha;
+@end
 
+@interface PanelView : UIView {
+}
+@property (assign) id<PanelProtocol> delegate;
+- (void) nextView;
 @end

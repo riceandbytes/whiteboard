@@ -8,11 +8,13 @@
 
 #import "MainViewController.h"
 #import "ColorPanelView.h"
+#import "PanelView.h"
 
-@interface MainViewController () <UIGestureRecognizerDelegate> {
+@interface MainViewController () <UIGestureRecognizerDelegate, PanelProtocol> {
     CGFloat _centerX;
-    UIView* _miniView;
+    PanelView* panelView;
     CGRect _start;
+    BOOL ignore;
 }
 @end
 
@@ -20,7 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    ignore = NO;
+    
     UIScreenEdgePanGestureRecognizer *leftEdgeGesture =
         [[UIScreenEdgePanGestureRecognizer alloc]
          initWithTarget:self action:@selector(handleLeftEdgeGesture:)];
@@ -42,11 +46,9 @@
                rect.size.width, rect.size.height/2);
     // shift view off screen
     
-    _miniView = [[[NSBundle mainBundle] loadNibNamed:@"ColorPanelView" owner:self options:nil] firstObject];
-    [_miniView setFrame:_start];
-    
-    [_miniView setBackgroundColor:[UIColor lightGrayColor]];
-    [self.view addSubview:_miniView];
+    panelView = [[PanelView alloc] initWithFrame:_start];
+    [panelView setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view addSubview:panelView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,17 +58,11 @@
 
 - (void)handleLeftEdgeGesture:(UIScreenEdgePanGestureRecognizer *)gesture {
     
-    if(UIGestureRecognizerStateBegan == gesture.state ||
-       UIGestureRecognizerStateChanged == gesture.state) {
-        CGPoint translation = [gesture translationInView:gesture.view];
+    if(UIGestureRecognizerStateEnded == gesture.state) {        
         [UIView animateWithDuration:.5 animations:^{
-            _miniView.center = CGPointMake(_centerX + translation.x, _miniView.center.y);
-        }];
-    } else {// cancel, fail, or ended
-            // Animate back to center x
-        [UIView animateWithDuration:.3 animations:^{
-            
-            _miniView.center = CGPointMake(_centerX, _miniView.center.y);
+            [panelView nextView];
+            panelView.center = CGPointMake(_centerX, panelView.center.y);
+
         }];
     }
 }
@@ -77,9 +73,17 @@
        UIGestureRecognizerStateChanged == gesture.state) {
         [UIView animateWithDuration:.5 animations:^{
             
-            _miniView.frame = _start;
+            panelView.frame = _start;
         }];
     }
 }
+
+#pragma mark - Panel Protocol
+
+- (void)changeColor: (UIColor*)color {
+    NSLog(@"Yay");
+}
+//- (void)changeLineWidth: (CGFloat)width;
+//- (void)changeAlpha: (CGFloat)alpha;
 
 @end
