@@ -1,18 +1,18 @@
 //
-//  SettingsViewController.m
+//  testViewController.m
 //  whiteboard
 //
 //  Created by visvavince on 5/19/15.
 //  Copyright (c) 2015 whiteboard. All rights reserved.
 //
 
-#import "SettingsViewController.h"
+#import "testViewController.h"
 
-@interface SettingsViewController ()
+@interface testViewController ()
 
 @end
 
-@implementation SettingsViewController
+@implementation testViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,10 +22,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)actionBack:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

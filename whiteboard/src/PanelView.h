@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.h
+//  PanelView.h
 //  whiteboard
 //
 //  Created by visvavince on 5/19/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+@interface PanelView : UIView
 
 @end
