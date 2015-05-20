@@ -25,10 +25,6 @@
 		1446AA381B0C580300A7E9E6 /* ColorPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA361B0C580300A7E9E6 /* ColorPanelView.m */; };
 		1446AA3A1B0C583C00A7E9E6 /* ColorPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA391B0C583C00A7E9E6 /* ColorPanelView.xib */; };
 		1446AA3B1B0C583C00A7E9E6 /* ColorPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA391B0C583C00A7E9E6 /* ColorPanelView.xib */; };
-		1446AA3E1B0C5B4900A7E9E6 /* testViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA3D1B0C5B4900A7E9E6 /* testViewController.storyboard */; };
-		1446AA3F1B0C5B4900A7E9E6 /* testViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA3D1B0C5B4900A7E9E6 /* testViewController.storyboard */; };
-		1446AA421B0C5B8A00A7E9E6 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA411B0C5B8A00A7E9E6 /* testViewController.m */; };
-		1446AA431B0C5B8A00A7E9E6 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA411B0C5B8A00A7E9E6 /* testViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +61,6 @@
 		1446AA351B0C580300A7E9E6 /* ColorPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPanelView.h; sourceTree = "<group>"; };
 		1446AA361B0C580300A7E9E6 /* ColorPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPanelView.m; sourceTree = "<group>"; };
 		1446AA391B0C583C00A7E9E6 /* ColorPanelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColorPanelView.xib; path = res/ColorPanelView.xib; sourceTree = "<group>"; };
-		1446AA3D1B0C5B4900A7E9E6 /* testViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = testViewController.storyboard; sourceTree = "<group>"; };
-		1446AA401B0C5B8A00A7E9E6 /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
-		1446AA411B0C5B8A00A7E9E6 /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,9 +154,6 @@
 				1446AA321B0C579300A7E9E6 /* PanelView.m */,
 				1446AA351B0C580300A7E9E6 /* ColorPanelView.h */,
 				1446AA361B0C580300A7E9E6 /* ColorPanelView.m */,
-				1446AA3D1B0C5B4900A7E9E6 /* testViewController.storyboard */,
-				1446AA401B0C5B8A00A7E9E6 /* testViewController.h */,
-				1446AA411B0C5B8A00A7E9E6 /* testViewController.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -259,7 +249,6 @@
 				1406E4811B0C48EF005D3E0C /* Main.storyboard in Resources */,
 				1446AA3A1B0C583C00A7E9E6 /* ColorPanelView.xib in Resources */,
 				1406E4861B0C48EF005D3E0C /* LaunchScreen.xib in Resources */,
-				1446AA3E1B0C5B4900A7E9E6 /* testViewController.storyboard in Resources */,
 				1406E4831B0C48EF005D3E0C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +257,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1446AA3F1B0C5B4900A7E9E6 /* testViewController.storyboard in Resources */,
 				1446AA3B1B0C583C00A7E9E6 /* ColorPanelView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +272,6 @@
 				1446AA2F1B0C519C00A7E9E6 /* Config.m in Sources */,
 				1446AA331B0C579300A7E9E6 /* PanelView.m in Sources */,
 				1406E4781B0C48EF005D3E0C /* AppDelegate.m in Sources */,
-				1446AA421B0C5B8A00A7E9E6 /* testViewController.m in Sources */,
 				1406E47B1B0C48EF005D3E0C /* whiteboard.xcdatamodeld in Sources */,
 				1406E47E1B0C48EF005D3E0C /* ViewController.m in Sources */,
 				1406E4751B0C48EF005D3E0C /* main.m in Sources */,
@@ -300,7 +287,6 @@
 				1446AA281B0C4AD100A7E9E6 /* DrawView.m in Sources */,
 				1446AA381B0C580300A7E9E6 /* ColorPanelView.m in Sources */,
 				1446AA341B0C579300A7E9E6 /* PanelView.m in Sources */,
-				1446AA431B0C5B8A00A7E9E6 /* testViewController.m in Sources */,
 				1406E4921B0C48EF005D3E0C /* whiteboardTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
