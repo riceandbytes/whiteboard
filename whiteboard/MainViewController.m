@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 whiteboard. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import "ColorPanelView.h"
 
-@interface ViewController () <UIGestureRecognizerDelegate> {
+@interface MainViewController () <UIGestureRecognizerDelegate> {
     CGFloat _centerX;
     UIView* _miniView;
     CGRect _start;
 }
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,9 +47,6 @@
     
     [_miniView setBackgroundColor:[UIColor lightGrayColor]];
     [self.view addSubview:_miniView];
-    
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"testViewController" bundle:nil];
-//    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"testViewController"];
 }
 
 - (void)didReceiveMemoryWarning {
