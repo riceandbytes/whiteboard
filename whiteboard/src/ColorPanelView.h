@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *redButton;
 @property (weak, nonatomic) IBOutlet UIButton *greenButton;
 @property (weak, nonatomic) IBOutlet UIButton *blueButton;
+@property (assign) id<PanelProtocol> delegate;
 @end

@@ -15,12 +15,13 @@
     
     CGFloat lineWidth;
     CGFloat alpha;
-    UIColor* color;
     CGMutablePathRef path;
 }
 @end
 
 @implementation DrawView
+
+@synthesize color = _color;
 
 #pragma mark - Inits
 
@@ -43,7 +44,7 @@
 - (void) setup {
     lineWidth = 1.0;
     alpha = 1.0;
-    color = [UIColor blackColor];
+    _color = [UIColor blackColor];
     path = CGPathCreateMutable();
 }
 
@@ -102,7 +103,7 @@
     CGContextAddPath(context, path);
     CGContextSetLineCap(context, kCGLineCapRound);
     CGContextSetLineWidth(context, lineWidth);
-    CGContextSetStrokeColorWithColor(context, color.CGColor);
+    CGContextSetStrokeColorWithColor(context, _color.CGColor);
     CGContextSetBlendMode(context, kCGBlendModeNormal);
     CGContextSetAlpha(context, alpha);
     CGContextStrokePath(context);

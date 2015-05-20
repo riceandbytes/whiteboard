@@ -20,6 +20,8 @@
 
 @implementation MainViewController
 
+@synthesize drawView = _drawView;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -51,6 +53,10 @@
     [self.view addSubview:panelView];
 }
 
+- (void)dealloc {
+    NSLog(@"Main View Dealloc");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -60,7 +66,7 @@
     
     if(UIGestureRecognizerStateEnded == gesture.state) {        
         [UIView animateWithDuration:.5 animations:^{
-            [panelView nextView];
+            [panelView nextView:self];
             panelView.center = CGPointMake(_centerX, panelView.center.y);
 
         }];
@@ -81,9 +87,14 @@
 #pragma mark - Panel Protocol
 
 - (void)changeColor: (UIColor*)color {
-    NSLog(@"Yay");
+    [self.drawView setColor:color];
 }
-//- (void)changeLineWidth: (CGFloat)width;
-//- (void)changeAlpha: (CGFloat)alpha;
+
+- (void)changeLineWidth: (CGFloat)width {
+    
+}
+- (void)changeAlpha: (CGFloat)alpha {
+    
+}
 
 @end

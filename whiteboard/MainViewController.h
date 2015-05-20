@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DrawView.h"
 
 @interface MainViewController : UIViewController
-
-
+@property (weak, nonatomic) IBOutlet DrawView *drawView;
 @end
 

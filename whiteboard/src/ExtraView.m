@@ -9,6 +9,7 @@
 #import "ExtraView.h"
 
 @implementation ExtraView
+@synthesize delegate = _delegate;
 
 /*
 // Only override drawRect: if you perform custom drawing.

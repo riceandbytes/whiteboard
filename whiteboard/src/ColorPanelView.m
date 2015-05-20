@@ -9,16 +9,16 @@
 #import "ColorPanelView.h"
 
 @interface ColorPanelView() {
-    id<PanelProtocol> delegate;
 }
 @end
 
 @implementation ColorPanelView
 
+@synthesize delegate = _delegate;
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        delegate = self.delegate;
     }
     return self;
 }
@@ -26,7 +26,6 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        delegate = self.delegate;
     }
     return self;
 }
@@ -38,8 +37,36 @@
     // Drawing code
 }
 */
-- (IBAction)backColor:(id)sender {
-    [delegate changeColor:[UIColor blackColor]];
+- (IBAction)blackColor:(id)sender {
+    [_delegate changeColor:[UIColor blackColor]];
+}
+
+- (IBAction)darkGrayColor:(id)sender {
+    [_delegate changeColor:[UIColor darkGrayColor]];
+}
+
+- (IBAction)lightGreyColor:(id)sender {
+    [_delegate changeColor:[UIColor lightGrayColor]];
+}
+
+- (IBAction)blueColor:(id)sender {
+    [_delegate changeColor:[UIColor blueColor]];
+}
+
+- (IBAction)redColor:(id)sender {
+    [_delegate changeColor:[UIColor redColor]];
+}
+
+- (IBAction)greenColor:(id)sender {
+    [_delegate changeColor:[UIColor greenColor]];
+}
+
+- (IBAction)orangeColor:(id)sender {
+    [_delegate changeColor:[UIColor orangeColor]];
+}
+
+- (IBAction)yellowColor:(id)sender {
+    [_delegate changeColor:[UIColor yellowColor]];
 }
 
 @end

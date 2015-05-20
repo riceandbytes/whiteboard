@@ -111,7 +111,6 @@
 			children = (
 				1446AA3C1B0C584400A7E9E6 /* res */,
 				1446AA241B0C4AD100A7E9E6 /* src */,
-				1406E47F1B0C48EF005D3E0C /* Main.storyboard */,
 				1406E4821B0C48EF005D3E0C /* Images.xcassets */,
 				1406E4841B0C48EF005D3E0C /* LaunchScreen.xib */,
 				1406E4791B0C48EF005D3E0C /* whiteboard.xcdatamodeld */,
@@ -170,6 +169,7 @@
 		1446AA3C1B0C584400A7E9E6 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				1406E47F1B0C48EF005D3E0C /* Main.storyboard */,
 				1446AA391B0C583C00A7E9E6 /* ColorPanelView.xib */,
 				1446AA481B0C705600A7E9E6 /* ExtraView.xib */,
 			);

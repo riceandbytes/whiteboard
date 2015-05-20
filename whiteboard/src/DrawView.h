@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DrawView : UIView
-
+@property (nonatomic, weak) UIColor* color;
 @end

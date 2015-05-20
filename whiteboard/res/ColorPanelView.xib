@@ -23,7 +23,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="backColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="U2O-D9-93A"/>
+                        <action selector="blackColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="KHz-UD-Knp"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c80-Qh-3lW">
@@ -37,6 +37,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="greenColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="aVP-wf-Jn6"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEk-sV-D4I">
                     <rect key="frame" x="300" y="307" width="50" height="50"/>
@@ -48,6 +51,10 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="greenColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="qj7-KT-v5O"/>
+                        <action selector="orangeColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="vj8-4g-Ldn"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEZ-68-t5h">
                     <rect key="frame" x="358" y="307" width="50" height="50"/>
@@ -59,6 +66,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="yellowColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="6u5-5n-JiN"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Si-9W-WnI">
                     <rect key="frame" x="242" y="250" width="50" height="50"/>
@@ -71,6 +81,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="darkGrayColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="HaG-wh-cht"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tej-jq-nlZ">
                     <rect key="frame" x="300" y="250" width="50" height="50"/>
@@ -83,6 +96,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="lightGreyColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="xye-BB-6j7"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vED-Ro-EsJ">
                     <rect key="frame" x="358" y="250" width="50" height="50"/>
@@ -95,6 +111,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="blueColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="yj4-94-ksn"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zv0-HZ-f7X">
                     <rect key="frame" x="184" y="307" width="50" height="50"/>
@@ -107,6 +126,9 @@
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="redColor:" destination="iN0-l3-epB" eventType="touchUpInside" id="kgc-rb-I5D"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="0.5" colorSpace="calibratedRGB"/>
