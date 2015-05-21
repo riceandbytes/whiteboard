@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UISlider *lineWidthSlider;
 @property (weak, nonatomic) IBOutlet UISlider *alphaSlider;
+@property (weak, nonatomic) IBOutlet UIButton *eraseButton;
 
 @end
 
@@ -22,9 +23,15 @@
 @synthesize delegate = _delegate;
 @synthesize lineWidthSlider = _lineWidthSlider;
 @synthesize alphaSlider = _alphaSlider;
+@synthesize eraseButton = _eraseButton;
 
 - (IBAction)eraseButton:(id)sender {
     isErase = !isErase;
+    if (isErase) {
+        [_eraseButton setBackgroundColor:[UIColor redColor]];
+    } else {
+        [_eraseButton setBackgroundColor:[UIColor clearColor]];
+    }
     [_delegate eraseMode:isErase];
 }
 

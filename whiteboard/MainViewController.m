@@ -11,10 +11,11 @@
 #import "PanelView.h"
 
 @interface MainViewController () <UIGestureRecognizerDelegate, PanelProtocol> {
-    CGFloat _centerX;
+    CGFloat centerX;
     PanelView* panelView;
-    CGRect _start;
+    CGRect start;
     BOOL ignore;
+    UIColor *lastColor;
 }
 @end
 
@@ -25,7 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // defaults
     ignore = NO;
+    lastColor = [UIColor blackColor];
     
     UIScreenEdgePanGestureRecognizer *leftEdgeGesture =
         [[UIScreenEdgePanGestureRecognizer alloc]
@@ -41,14 +44,14 @@
     rightEdgeGesture.delegate = self;
     [self.view addGestureRecognizer:rightEdgeGesture];
     
-    _centerX = self.view.bounds.size.width / 2;
+    centerX = self.view.bounds.size.width / 2;
     
     CGRect rect = [[UIScreen mainScreen] bounds];
-    _start = CGRectMake(-rect.size.width, rect.size.height/2,
+    start = CGRectMake(-rect.size.width, rect.size.height/2,
                rect.size.width, rect.size.height/2);
     // shift view off screen
     
-    panelView = [[PanelView alloc] initWithFrame:_start];
+    panelView = [[PanelView alloc] initWithFrame:start];
     [panelView setBackgroundColor:[UIColor lightGrayColor]];
     [self.view addSubview:panelView];
 }
@@ -67,7 +70,7 @@
     if(UIGestureRecognizerStateEnded == gesture.state) {        
         [UIView animateWithDuration:.5 animations:^{
             [panelView nextView:self];
-            panelView.center = CGPointMake(_centerX, panelView.center.y);
+            panelView.center = CGPointMake(centerX, panelView.center.y);
 
         }];
     }
@@ -79,7 +82,7 @@
        UIGestureRecognizerStateChanged == gesture.state) {
         [UIView animateWithDuration:.5 animations:^{
             
-            panelView.frame = _start;
+            panelView.frame = start;
         }];
     }
 }
@@ -87,6 +90,7 @@
 #pragma mark - Panel Protocol
 
 - (void) changeColor: (UIColor*)color {
+    lastColor = color;
     [self.drawView setColor:color];
 }
 
@@ -99,7 +103,11 @@
 }
 
 - (void) eraseMode: (BOOL)on {
-    
+    if (on) {
+        [self.drawView setColor:[UIColor whiteColor]];
+    } else {
+        [self.drawView setColor:lastColor];
+    }
 }
 
 @end

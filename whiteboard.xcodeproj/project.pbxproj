@@ -196,8 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				1446AA521B0D94E500A7E9E6 /* ColorPanelView.xib */,
-				1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */,
 				1446AA501B0D94E500A7E9E6 /* SpecialPanelView.xib */,
+				1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */,
 			);
 			name = Panels;
 			sourceTree = "<group>";
