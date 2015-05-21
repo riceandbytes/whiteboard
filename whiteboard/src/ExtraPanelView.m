@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 whiteboard. All rights reserved.
 //
 
-#import "ExtraView.h"
+#import "ExtraPanelView.h"
 
-@implementation ExtraView
+@implementation ExtraPanelView
 @synthesize delegate = _delegate;
 
 /*

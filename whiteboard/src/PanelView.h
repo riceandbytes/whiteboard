@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @protocol PanelProtocol <NSObject>
-- (void)changeColor: (UIColor*)color;
-- (void)changeLineWidth: (CGFloat)width;
-- (void)changeAlpha: (CGFloat)alpha;
+- (void) changeColor: (UIColor*)color;
+- (void) changeLineWidth: (CGFloat)width;
+- (void) changeAlpha: (CGFloat)alpha;
+- (void) eraseMode: (BOOL)on;
 @end
 
 @interface PanelView : UIView {

@@ -86,14 +86,19 @@
 
 #pragma mark - Panel Protocol
 
-- (void)changeColor: (UIColor*)color {
+- (void) changeColor: (UIColor*)color {
     [self.drawView setColor:color];
 }
 
-- (void)changeLineWidth: (CGFloat)width {
-    
+- (void) changeLineWidth: (CGFloat)width {
+    [self.drawView setLineWidth:width];
 }
-- (void)changeAlpha: (CGFloat)alpha {
+
+- (void) changeAlpha: (CGFloat)alpha {
+    [self.drawView setAlpha:alpha];
+}
+
+- (void) eraseMode: (BOOL)on {
     
 }
 

@@ -23,12 +23,16 @@
 		1446AA341B0C579300A7E9E6 /* PanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA321B0C579300A7E9E6 /* PanelView.m */; };
 		1446AA371B0C580300A7E9E6 /* ColorPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA361B0C580300A7E9E6 /* ColorPanelView.m */; };
 		1446AA381B0C580300A7E9E6 /* ColorPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA361B0C580300A7E9E6 /* ColorPanelView.m */; };
-		1446AA3A1B0C583C00A7E9E6 /* ColorPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA391B0C583C00A7E9E6 /* ColorPanelView.xib */; };
-		1446AA3B1B0C583C00A7E9E6 /* ColorPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA391B0C583C00A7E9E6 /* ColorPanelView.xib */; };
-		1446AA461B0C704000A7E9E6 /* ExtraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA451B0C704000A7E9E6 /* ExtraView.m */; };
-		1446AA471B0C704000A7E9E6 /* ExtraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA451B0C704000A7E9E6 /* ExtraView.m */; };
-		1446AA491B0C705600A7E9E6 /* ExtraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA481B0C705600A7E9E6 /* ExtraView.xib */; };
-		1446AA4A1B0C705600A7E9E6 /* ExtraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA481B0C705600A7E9E6 /* ExtraView.xib */; };
+		1446AA461B0C704000A7E9E6 /* ExtraPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA451B0C704000A7E9E6 /* ExtraPanelView.m */; };
+		1446AA471B0C704000A7E9E6 /* ExtraPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA451B0C704000A7E9E6 /* ExtraPanelView.m */; };
+		1446AA531B0D94E500A7E9E6 /* SpecialPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA501B0D94E500A7E9E6 /* SpecialPanelView.xib */; };
+		1446AA541B0D94E500A7E9E6 /* SpecialPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA501B0D94E500A7E9E6 /* SpecialPanelView.xib */; };
+		1446AA571B0D94E500A7E9E6 /* ColorPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA521B0D94E500A7E9E6 /* ColorPanelView.xib */; };
+		1446AA581B0D94E500A7E9E6 /* ColorPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA521B0D94E500A7E9E6 /* ColorPanelView.xib */; };
+		1446AA5B1B0D950200A7E9E6 /* SpecialPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA5A1B0D950200A7E9E6 /* SpecialPanelView.m */; };
+		1446AA5C1B0D950200A7E9E6 /* SpecialPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA5A1B0D950200A7E9E6 /* SpecialPanelView.m */; };
+		1446AA5E1B0D9C3B00A7E9E6 /* ExtraPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */; };
+		1446AA5F1B0D9C3B00A7E9E6 /* ExtraPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +68,13 @@
 		1446AA321B0C579300A7E9E6 /* PanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelView.m; sourceTree = "<group>"; };
 		1446AA351B0C580300A7E9E6 /* ColorPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPanelView.h; sourceTree = "<group>"; };
 		1446AA361B0C580300A7E9E6 /* ColorPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPanelView.m; sourceTree = "<group>"; };
-		1446AA391B0C583C00A7E9E6 /* ColorPanelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColorPanelView.xib; path = res/ColorPanelView.xib; sourceTree = "<group>"; };
-		1446AA441B0C704000A7E9E6 /* ExtraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtraView.h; sourceTree = "<group>"; };
-		1446AA451B0C704000A7E9E6 /* ExtraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtraView.m; sourceTree = "<group>"; };
-		1446AA481B0C705600A7E9E6 /* ExtraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExtraView.xib; path = res/ExtraView.xib; sourceTree = "<group>"; };
+		1446AA441B0C704000A7E9E6 /* ExtraPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtraPanelView.h; sourceTree = "<group>"; };
+		1446AA451B0C704000A7E9E6 /* ExtraPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtraPanelView.m; sourceTree = "<group>"; };
+		1446AA501B0D94E500A7E9E6 /* SpecialPanelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpecialPanelView.xib; path = res/Panels/SpecialPanelView.xib; sourceTree = "<group>"; };
+		1446AA521B0D94E500A7E9E6 /* ColorPanelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColorPanelView.xib; path = res/Panels/ColorPanelView.xib; sourceTree = "<group>"; };
+		1446AA591B0D950200A7E9E6 /* SpecialPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialPanelView.h; sourceTree = "<group>"; };
+		1446AA5A1B0D950200A7E9E6 /* SpecialPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialPanelView.m; sourceTree = "<group>"; };
+		1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExtraPanelView.xib; path = res/Panels/ExtraPanelView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,12 +163,7 @@
 				1446AA261B0C4AD100A7E9E6 /* DrawView.m */,
 				1446AA2D1B0C519C00A7E9E6 /* Config.h */,
 				1446AA2E1B0C519C00A7E9E6 /* Config.m */,
-				1446AA311B0C579300A7E9E6 /* PanelView.h */,
-				1446AA321B0C579300A7E9E6 /* PanelView.m */,
-				1446AA351B0C580300A7E9E6 /* ColorPanelView.h */,
-				1446AA361B0C580300A7E9E6 /* ColorPanelView.m */,
-				1446AA441B0C704000A7E9E6 /* ExtraView.h */,
-				1446AA451B0C704000A7E9E6 /* ExtraView.m */,
+				1446AA4B1B0D940800A7E9E6 /* Panels */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -170,10 +172,34 @@
 			isa = PBXGroup;
 			children = (
 				1406E47F1B0C48EF005D3E0C /* Main.storyboard */,
-				1446AA391B0C583C00A7E9E6 /* ColorPanelView.xib */,
-				1446AA481B0C705600A7E9E6 /* ExtraView.xib */,
+				1446AA4C1B0D941900A7E9E6 /* Panels */,
 			);
 			name = res;
+			sourceTree = "<group>";
+		};
+		1446AA4B1B0D940800A7E9E6 /* Panels */ = {
+			isa = PBXGroup;
+			children = (
+				1446AA311B0C579300A7E9E6 /* PanelView.h */,
+				1446AA321B0C579300A7E9E6 /* PanelView.m */,
+				1446AA351B0C580300A7E9E6 /* ColorPanelView.h */,
+				1446AA361B0C580300A7E9E6 /* ColorPanelView.m */,
+				1446AA441B0C704000A7E9E6 /* ExtraPanelView.h */,
+				1446AA451B0C704000A7E9E6 /* ExtraPanelView.m */,
+				1446AA591B0D950200A7E9E6 /* SpecialPanelView.h */,
+				1446AA5A1B0D950200A7E9E6 /* SpecialPanelView.m */,
+			);
+			name = Panels;
+			sourceTree = "<group>";
+		};
+		1446AA4C1B0D941900A7E9E6 /* Panels */ = {
+			isa = PBXGroup;
+			children = (
+				1446AA521B0D94E500A7E9E6 /* ColorPanelView.xib */,
+				1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */,
+				1446AA501B0D94E500A7E9E6 /* SpecialPanelView.xib */,
+			);
+			name = Panels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,10 +282,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1446AA5E1B0D9C3B00A7E9E6 /* ExtraPanelView.xib in Resources */,
 				1406E4811B0C48EF005D3E0C /* Main.storyboard in Resources */,
-				1446AA3A1B0C583C00A7E9E6 /* ColorPanelView.xib in Resources */,
-				1446AA491B0C705600A7E9E6 /* ExtraView.xib in Resources */,
+				1446AA531B0D94E500A7E9E6 /* SpecialPanelView.xib in Resources */,
 				1406E4861B0C48EF005D3E0C /* LaunchScreen.xib in Resources */,
+				1446AA571B0D94E500A7E9E6 /* ColorPanelView.xib in Resources */,
 				1406E4831B0C48EF005D3E0C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,8 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1446AA3B1B0C583C00A7E9E6 /* ColorPanelView.xib in Resources */,
-				1446AA4A1B0C705600A7E9E6 /* ExtraView.xib in Resources */,
+				1446AA5F1B0D9C3B00A7E9E6 /* ExtraPanelView.xib in Resources */,
+				1446AA581B0D94E500A7E9E6 /* ColorPanelView.xib in Resources */,
+				1446AA541B0D94E500A7E9E6 /* SpecialPanelView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +309,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1446AA371B0C580300A7E9E6 /* ColorPanelView.m in Sources */,
+				1446AA5B1B0D950200A7E9E6 /* SpecialPanelView.m in Sources */,
 				1446AA2F1B0C519C00A7E9E6 /* Config.m in Sources */,
-				1446AA461B0C704000A7E9E6 /* ExtraView.m in Sources */,
+				1446AA461B0C704000A7E9E6 /* ExtraPanelView.m in Sources */,
 				1446AA331B0C579300A7E9E6 /* PanelView.m in Sources */,
 				1406E4781B0C48EF005D3E0C /* AppDelegate.m in Sources */,
 				1406E47B1B0C48EF005D3E0C /* whiteboard.xcdatamodeld in Sources */,
@@ -297,11 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1446AA301B0C519C00A7E9E6 /* Config.m in Sources */,
+				1446AA5C1B0D950200A7E9E6 /* SpecialPanelView.m in Sources */,
 				1446AA281B0C4AD100A7E9E6 /* DrawView.m in Sources */,
 				1446AA381B0C580300A7E9E6 /* ColorPanelView.m in Sources */,
 				1446AA341B0C579300A7E9E6 /* PanelView.m in Sources */,
 				1406E4921B0C48EF005D3E0C /* whiteboardTests.m in Sources */,
-				1446AA471B0C704000A7E9E6 /* ExtraView.m in Sources */,
+				1446AA471B0C704000A7E9E6 /* ExtraPanelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

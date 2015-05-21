@@ -9,5 +9,5 @@
 #import "PanelView.h"
 
 @interface SpecialPanelView : PanelView
-
+@property (assign) id<PanelProtocol> delegate;
 @end

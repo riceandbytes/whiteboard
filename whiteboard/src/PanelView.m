@@ -32,19 +32,14 @@
 - (void)dealloc {
     NSLog(@"Panel View Dealloc");
 }
-//- (id)initWithCoder:(NSCoder *)aDecoder {
-//    self = [super initWithCoder:aDecoder];
-//    if (self) {
-//        [self setup];
-//    }
-//    return self;
-//}
 
 - (void) setup: (CGRect)frame {
+    
     currentIndex = 0;
     array = [NSMutableArray arrayWithCapacity:0];
     
-    NSArray *views = @[@"ColorPanelView", @"ExtraView"];
+    NSArray *views = @[@"ColorPanelView", @"SpecialPanelView", @"ExtraPanelView"];
+    
     for (NSString* name in views) {
         PanelView* vc = [[[NSBundle mainBundle] loadNibNamed:name owner:self options:nil] firstObject];
         [vc setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
@@ -53,10 +48,13 @@
 }
 
 - (void) nextView: (id<PanelProtocol>) del {
+    
     [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
     PanelView* pv = [array objectAtIndex:currentIndex];
     pv.delegate = del;
     [self addSubview:pv];
+    
     ++currentIndex;
     if (currentIndex >= array.count) {
         currentIndex = 0;

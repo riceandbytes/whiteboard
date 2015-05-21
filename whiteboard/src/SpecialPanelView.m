@@ -8,14 +8,32 @@
 
 #import "SpecialPanelView.h"
 
+@interface SpecialPanelView() {
+    BOOL isErase;
+}
+
+@property (weak, nonatomic) IBOutlet UISlider *lineWidthSlider;
+@property (weak, nonatomic) IBOutlet UISlider *alphaSlider;
+
+@end
+
 @implementation SpecialPanelView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+@synthesize delegate = _delegate;
+@synthesize lineWidthSlider = _lineWidthSlider;
+@synthesize alphaSlider = _alphaSlider;
+
+- (IBAction)eraseButton:(id)sender {
+    isErase = !isErase;
+    [_delegate eraseMode:isErase];
 }
-*/
+
+- (IBAction)actionLineWidthSlider:(id)sender {
+    [_delegate changeLineWidth:_lineWidthSlider.value];
+}
+
+- (IBAction)actionAlpha:(id)sender {
+    [_delegate changeAlpha:_alphaSlider.value];
+}
 
 @end
