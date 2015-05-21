@@ -15,7 +15,9 @@
     CGPoint pp2;
     
     CGMutablePathRef path;
+    
     UIImage *previousSnap;
+    UIImage *snapshot;
     
     NSMutableArray *history;
     NSMutableArray *redoHistory;
@@ -27,7 +29,6 @@
 @synthesize color = _color;
 @synthesize lineWidth = _lineWidth;
 @synthesize alpha = _alpha;
-@synthesize snapshot = _snapshot;
 
 #pragma mark - Inits
 
@@ -113,17 +114,16 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"Touches ended");
     
     [self touchesMoved:touches withEvent:event];
     
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
-    [_snapshot drawAtPoint:CGPointZero];
+    [snapshot drawAtPoint:CGPointZero];
     
     // need to draw here so uikit can have something to draw onto
     [self drawContext:path withLineWidth:_lineWidth withColor:_color withAlpha:_alpha];
     
-    _snapshot = UIGraphicsGetImageFromCurrentImageContext();
+    snapshot = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     Config* config = [[Config alloc] init];
@@ -144,8 +144,9 @@
 #pragma mark - Drawing
 
 - (void)drawRect:(CGRect)rect {
-NSLog(@"Rect: %@", NSStringFromCGRect(self.bounds));
-    [_snapshot drawInRect:self.bounds];
+    //NSLog(@"Rect: %@", NSStringFromCGRect(self.bounds));
+    
+    [snapshot drawInRect:self.bounds];
     [self drawContext:path withLineWidth:_lineWidth withColor:_color withAlpha:_alpha];
 }
 
@@ -173,7 +174,7 @@ NSLog(@"Rect: %@", NSStringFromCGRect(self.bounds));
     }
     
     // clear context and redraw
-    _snapshot = nil;
+    snapshot = nil;
     [self setNeedsDisplay];
     
     // run back through history and draw path
@@ -186,7 +187,7 @@ NSLog(@"Rect: %@", NSStringFromCGRect(self.bounds));
         [self drawContext:config.getPath withLineWidth:config.lineWidth
                 withColor:config.color withAlpha:config.alpha];
     }
-    _snapshot = UIGraphicsGetImageFromCurrentImageContext();
+    snapshot = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     [self setNeedsDisplay];
@@ -201,11 +202,11 @@ NSLog(@"Rect: %@", NSStringFromCGRect(self.bounds));
     // run back through history and draw path
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
     
-    [_snapshot drawAtPoint:CGPointZero];
+    [snapshot drawAtPoint:CGPointZero];
     [self drawContext:config.getPath withLineWidth:config.lineWidth
                 withColor:config.color withAlpha:config.alpha];
     
-    _snapshot = UIGraphicsGetImageFromCurrentImageContext();
+    snapshot = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     [self setNeedsDisplay];
@@ -218,6 +219,10 @@ NSLog(@"Rect: %@", NSStringFromCGRect(self.bounds));
 
 CGPoint midPoint(CGPoint p1, CGPoint p2) {
     return CGPointMake((p1.x + p2.x)/2, (p1.y + p2.y)/2);
+}
+
+- (UIImage*) getSnapshop {
+    return snapshot;
 }
 
 @end

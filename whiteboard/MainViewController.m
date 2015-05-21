@@ -122,7 +122,7 @@
 }
 
 - (void) screenAndEmail {
-    [self emailWithImage:self.drawView.snapshot];
+    [self emailWithImage:self.drawView.getSnapshop];
 }
 
 #pragma mark - Utilitys
