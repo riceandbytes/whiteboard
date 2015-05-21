@@ -38,10 +38,27 @@
                         <action selector="actionRedo:" destination="iN0-l3-epB" eventType="touchUpInside" id="5H2-ww-2mb"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNC-d0-RBG">
+                    <rect key="frame" x="173" y="107" width="254" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="KE3-mM-6rN"/>
+                        <constraint firstAttribute="width" constant="254" id="qM8-pG-Z4H"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="Take Screen Shot and Email">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionRedo:" destination="iN0-l3-epB" eventType="touchUpInside" id="NLd-to-I0D"/>
+                        <action selector="actionScreenAndEmail:" destination="iN0-l3-epB" eventType="touchUpInside" id="cCY-ZA-2Dw"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="GNC-d0-RBG" firstAttribute="top" secondItem="dzl-gQ-3QP" secondAttribute="bottom" constant="17" id="49c-RF-E0x"/>
                 <constraint firstItem="aFM-mI-70j" firstAttribute="top" secondItem="dzl-gQ-3QP" secondAttribute="top" id="56F-wq-h9D"/>
+                <constraint firstAttribute="centerX" secondItem="GNC-d0-RBG" secondAttribute="centerX" id="TXx-h5-qst"/>
                 <constraint firstItem="aFM-mI-70j" firstAttribute="leading" secondItem="dzl-gQ-3QP" secondAttribute="trailing" constant="50" id="aTM-OX-gs4"/>
                 <constraint firstAttribute="centerX" secondItem="aFM-mI-70j" secondAttribute="centerX" constant="-75" id="kja-rj-887"/>
                 <constraint firstItem="aFM-mI-70j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="wjI-Z4-2Cj"/>

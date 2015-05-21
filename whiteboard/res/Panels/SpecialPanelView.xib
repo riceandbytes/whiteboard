@@ -24,7 +24,7 @@
                         <action selector="eraseButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="wWk-J4-9dR"/>
                     </connections>
                 </button>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Qe3-gl-kAw">
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qe3-gl-kAw">
                     <rect key="frame" x="18" y="97" width="564" height="31"/>
                     <connections>
                         <action selector="actionLineWidthSlider:" destination="iN0-l3-epB" eventType="valueChanged" id="eTz-VP-sr1"/>

@@ -20,6 +20,9 @@
     [_delegate undo];
 }
 
+- (IBAction)actionScreenAndEmail:(id)sender {
+    [_delegate screenAndEmail];
+}
 
 
 @end

@@ -33,6 +33,7 @@
 		1446AA5C1B0D950200A7E9E6 /* SpecialPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA5A1B0D950200A7E9E6 /* SpecialPanelView.m */; };
 		1446AA5E1B0D9C3B00A7E9E6 /* ExtraPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */; };
 		1446AA5F1B0D9C3B00A7E9E6 /* ExtraPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */; };
+		1446AA611B0DC92E00A7E9E6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1446AA601B0DC92E00A7E9E6 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		1446AA591B0D950200A7E9E6 /* SpecialPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialPanelView.h; sourceTree = "<group>"; };
 		1446AA5A1B0D950200A7E9E6 /* SpecialPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialPanelView.m; sourceTree = "<group>"; };
 		1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExtraPanelView.xib; path = res/Panels/ExtraPanelView.xib; sourceTree = "<group>"; };
+		1446AA601B0DC92E00A7E9E6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1446AA611B0DC92E00A7E9E6 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				1406E4711B0C48EF005D3E0C /* whiteboard */,
+				1446AA621B0DC93A00A7E9E6 /* libs */,
 				1406E48E1B0C48EF005D3E0C /* whiteboardTests */,
 				1406E4701B0C48EF005D3E0C /* Products */,
 			);
@@ -200,6 +204,15 @@
 				1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */,
 			);
 			name = Panels;
+			sourceTree = "<group>";
+		};
+		1446AA621B0DC93A00A7E9E6 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				1446AA601B0DC92E00A7E9E6 /* MessageUI.framework */,
+			);
+			name = libs;
+			path = whiteboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

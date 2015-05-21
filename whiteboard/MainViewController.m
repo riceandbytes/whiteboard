@@ -9,8 +9,11 @@
 #import "MainViewController.h"
 #import "ColorPanelView.h"
 #import "PanelView.h"
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface MainViewController () <UIGestureRecognizerDelegate, PanelProtocol> {
+@interface MainViewController () <UIGestureRecognizerDelegate, PanelProtocol,
+                                    MFMailComposeViewControllerDelegate> {
     CGFloat centerX;
     PanelView* panelView;
     CGRect start;
@@ -116,6 +119,32 @@
 
 - (void) redo {
     [self.drawView redo];
+}
+
+- (void) screenAndEmail {
+    [self emailWithImage:self.drawView.snapshot];
+}
+
+#pragma mark - Utilitys
+
+- (void) emailWithImage: (UIImage*) img {
+    MFMailComposeViewController *vc = [[MFMailComposeViewController alloc] init];
+    [vc setMailComposeDelegate:self];
+    if([MFMailComposeViewController canSendMail]) {
+        [vc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+        [vc setSubject:@"Check out my Whiteboard drawing!!!"];
+        [vc setMessageBody:@"What do you think?" isHTML:NO];
+        NSData *data = UIImageJPEGRepresentation(img,1);
+        [vc addAttachmentData:data  mimeType:@"image/jpeg" fileName:@"whiteboard.jpg"];
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+}
+
+#pragma mark - Mail Delegate
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

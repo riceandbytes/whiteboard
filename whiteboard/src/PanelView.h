@@ -15,6 +15,7 @@
 - (void) eraseMode: (BOOL)on;
 - (void) redo;
 - (void) undo;
+- (void) screenAndEmail;
 @end
 
 @interface PanelView : UIView {
