@@ -205,6 +205,7 @@
     UIGraphicsEndImageContext();
     
     [self setNeedsDisplay];
+    [history addObject:config];
     [redoHistory removeLastObject];
 }
 
