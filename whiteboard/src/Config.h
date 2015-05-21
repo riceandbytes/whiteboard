@@ -10,7 +10,10 @@
 #import <UIKit/UIKit.h>
 
 @interface Config : NSObject
-@property (nonatomic, assign) UIColor *color;
+@property (nonatomic, strong) UIColor *color;
 @property (nonatomic, assign) CGFloat lineWidth;
 @property (nonatomic, assign) CGFloat alpha;
+
+- (void) setPath: (CGPathRef)p;
+- (CGPathRef) getPath;
 @end

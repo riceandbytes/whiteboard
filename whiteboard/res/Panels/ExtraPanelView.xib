@@ -9,7 +9,43 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ExtraPanelView">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzl-gQ-3QP">
+                    <rect key="frame" x="175" y="40" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="3hf-jW-iIy"/>
+                        <constraint firstAttribute="height" constant="50" id="hnq-Z9-Vrf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                    <state key="normal" title="Undo">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionUndo:" destination="iN0-l3-epB" eventType="touchUpInside" id="7eM-5B-T2D"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFM-mI-70j">
+                    <rect key="frame" x="325" y="40" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="JRz-bH-Zk6"/>
+                        <constraint firstAttribute="width" constant="100" id="UxD-pa-ewv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                    <state key="normal" title="Redo">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionRedo:" destination="iN0-l3-epB" eventType="touchUpInside" id="5H2-ww-2mb"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aFM-mI-70j" firstAttribute="top" secondItem="dzl-gQ-3QP" secondAttribute="top" id="56F-wq-h9D"/>
+                <constraint firstItem="aFM-mI-70j" firstAttribute="leading" secondItem="dzl-gQ-3QP" secondAttribute="trailing" constant="50" id="aTM-OX-gs4"/>
+                <constraint firstAttribute="centerX" secondItem="aFM-mI-70j" secondAttribute="centerX" constant="-75" id="kja-rj-887"/>
+                <constraint firstItem="aFM-mI-70j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="wjI-Z4-2Cj"/>
+            </constraints>
         </view>
     </objects>
 </document>

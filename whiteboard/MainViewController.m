@@ -110,4 +110,12 @@
     }
 }
 
+- (void) undo {
+    [self.drawView undo];
+}
+
+- (void) redo {
+    [self.drawView redo];
+}
+
 @end

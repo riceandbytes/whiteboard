@@ -13,6 +13,8 @@
 - (void) changeLineWidth: (CGFloat)width;
 - (void) changeAlpha: (CGFloat)alpha;
 - (void) eraseMode: (BOOL)on;
+- (void) redo;
+- (void) undo;
 @end
 
 @interface PanelView : UIView {

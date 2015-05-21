@@ -12,4 +12,7 @@
 @property (nonatomic, weak) UIColor* color;
 @property (nonatomic, assign) CGFloat lineWidth;
 @property (nonatomic, assign) CGFloat alpha;
+
+- (void) undo;
+- (void) redo;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DrawView.h"
+#import "Config.h"
 
 @interface DrawView () {
     CGPoint cpt;
@@ -16,6 +17,8 @@
     CGMutablePathRef path;
     UIImage *snapshot;
     UIImage *previousSnap;
+    
+    NSMutableArray *history;
 }
 @end
 
@@ -47,6 +50,7 @@
     _lineWidth = 1.0;
     _alpha = 1.0;
     _color = [UIColor blackColor];
+    history = [NSMutableArray arrayWithCapacity:0];
 }
 
 - (void)dealloc {
@@ -105,10 +109,17 @@
     [snapshot drawAtPoint:CGPointZero];
     
     // need to draw here so uikit can have something to draw onto
-    [self drawContext];
+    [self drawContext:path withLineWidth:_lineWidth withColor:_color withAlpha:_alpha];
     
     snapshot = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
+    Config* config = [[Config alloc] init];
+    [config setAlpha:_alpha];
+    [config setLineWidth:_lineWidth];
+    [config setColor:_color];
+    [config setPath:path];
+    [history addObject:config];
     
     // reset
     path = nil;
@@ -122,18 +133,53 @@
 
 - (void)drawRect:(CGRect)rect {
     [snapshot drawInRect:self.bounds];
-    [self drawContext];
+    [self drawContext:path withLineWidth:_lineWidth withColor:_color withAlpha:_alpha];
 }
 
-- (void) drawContext {
+- (void) drawContext:(CGPathRef)p withLineWidth:(CGFloat)lw withColor:(UIColor*)c
+           withAlpha:(CGFloat)a {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextAddPath(context, path);
+    CGContextAddPath(context, p);
     CGContextSetLineCap(context, kCGLineCapRound);
-    CGContextSetLineWidth(context, _lineWidth);
-    CGContextSetStrokeColorWithColor(context, _color.CGColor);
+    CGContextSetLineWidth(context, lw);
+    CGContextSetStrokeColorWithColor(context, c.CGColor);
     CGContextSetBlendMode(context, kCGBlendModeNormal);
-    CGContextSetAlpha(context, _alpha);
+    CGContextSetAlpha(context, a);
     CGContextStrokePath(context);
+}
+
+#pragma mark - Undo and Redo
+
+- (void) undo {
+    if ([history lastObject] == nil) {
+        return;
+    } else {
+        [history removeLastObject];
+    }
+    
+    // clear context and redraw
+    snapshot = nil;
+    [self setNeedsDisplay];
+    
+    // run back through history and draw path
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
+    
+    // magic number 1 is for array reversal
+    //
+    for (int x = (int)history.count-1; x >= 0; --x) {
+        Config* config = [history objectAtIndex:x];
+        [self drawContext:config.getPath withLineWidth:config.lineWidth
+                withColor:config.color withAlpha:config.alpha];
+    }
+    snapshot = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    [self setNeedsDisplay];
+
+}
+
+- (void) redo {
+    
 }
 
 #pragma mark - Utility
