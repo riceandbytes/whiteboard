@@ -19,6 +19,7 @@
     UIImage *previousSnap;
     
     NSMutableArray *history;
+    NSMutableArray *redoHistory;
 }
 @end
 
@@ -50,7 +51,9 @@
     _lineWidth = 1.0;
     _alpha = 1.0;
     _color = [UIColor blackColor];
+    
     history = [NSMutableArray arrayWithCapacity:0];
+    redoHistory = [NSMutableArray arrayWithCapacity:0];
 }
 
 - (void)dealloc {
@@ -61,6 +64,12 @@
 #pragma mark - Touch Methods
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    // if you start drawing clear redo history
+    if (redoHistory.count > 0) {
+        [redoHistory removeAllObjects];
+    }
+    
     // reset path
     path = CGPathCreateMutable();
     
@@ -151,9 +160,11 @@
 #pragma mark - Undo and Redo
 
 - (void) undo {
-    if ([history lastObject] == nil) {
+    Config *cf = [history lastObject];
+    if (cf == nil) {
         return;
     } else {
+        [redoHistory addObject:cf];
         [history removeLastObject];
     }
     
@@ -175,11 +186,26 @@
     UIGraphicsEndImageContext();
     
     [self setNeedsDisplay];
-
 }
 
 - (void) redo {
+    Config *config = [redoHistory lastObject];
+    if (config == nil) {
+        return;
+    }
     
+    // run back through history and draw path
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
+    
+    [snapshot drawAtPoint:CGPointZero];
+    [self drawContext:config.getPath withLineWidth:config.lineWidth
+                withColor:config.color withAlpha:config.alpha];
+    
+    snapshot = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    [self setNeedsDisplay];
+    [redoHistory removeLastObject];
 }
 
 #pragma mark - Utility
