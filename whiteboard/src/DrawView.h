@@ -15,5 +15,6 @@
 
 - (void) undo;
 - (void) redo;
-- (UIImage*) getSnapshop;
+- (UIImage*) getSnapshot;
+- (void) setSnapshot: (UIImage*)image;
 @end

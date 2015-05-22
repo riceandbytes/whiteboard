@@ -13,12 +13,16 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 @interface MainViewController () <UIGestureRecognizerDelegate, PanelProtocol,
-                                    MFMailComposeViewControllerDelegate> {
+                                    MFMailComposeViewControllerDelegate,
+                                    UIImagePickerControllerDelegate,
+                                    UINavigationControllerDelegate> {
     CGFloat centerX;
     PanelView* panelView;
     CGRect start;
     BOOL ignore;
     UIColor *lastColor;
+    UIImagePickerController *imagePicker;
+    UIPopoverController *popover;
 }
 @end
 
@@ -122,7 +126,42 @@
 }
 
 - (void) screenAndEmail {
-    [self emailWithImage:self.drawView.getSnapshop];
+    [self emailWithImage:self.drawView.getSnapshot];
+}
+
+- (void) importImage {
+    imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    
+    if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    else
+    {
+        popover=[[UIPopoverController alloc]initWithContentViewController:imagePicker];
+        [popover presentPopoverFromRect:CGRectZero inView:self.view
+               permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+}
+
+#pragma mark - Import Image
+
+#pragma mark - ImagePickerController Delegate
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    if(UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone) {
+        [picker dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [popover dismissPopoverAnimated:YES];
+    }
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self.drawView setSnapshot:image];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Utilitys

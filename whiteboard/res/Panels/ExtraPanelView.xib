@@ -53,11 +53,29 @@
                         <action selector="actionScreenAndEmail:" destination="iN0-l3-epB" eventType="touchUpInside" id="cCY-ZA-2Dw"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpM-Di-SaY">
+                    <rect key="frame" x="173" y="145" width="254" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="254" id="6SN-VA-TKi"/>
+                        <constraint firstAttribute="height" constant="36" id="ZtI-98-fTO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="Import Image to Edit">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionImageToEdit:" destination="iN0-l3-epB" eventType="touchUpInside" id="XhG-5F-1Q5"/>
+                        <action selector="actionRedo:" destination="iN0-l3-epB" eventType="touchUpInside" id="iDQ-fU-f6e"/>
+                        <action selector="actionScreenAndEmail:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mlk-av-ZF2"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="GNC-d0-RBG" firstAttribute="top" secondItem="dzl-gQ-3QP" secondAttribute="bottom" constant="17" id="49c-RF-E0x"/>
                 <constraint firstItem="aFM-mI-70j" firstAttribute="top" secondItem="dzl-gQ-3QP" secondAttribute="top" id="56F-wq-h9D"/>
+                <constraint firstItem="WpM-Di-SaY" firstAttribute="top" secondItem="GNC-d0-RBG" secondAttribute="bottom" constant="8" id="7Cg-PO-x4j"/>
+                <constraint firstAttribute="centerX" secondItem="WpM-Di-SaY" secondAttribute="centerX" id="Kex-AL-RYT"/>
                 <constraint firstAttribute="centerX" secondItem="GNC-d0-RBG" secondAttribute="centerX" id="TXx-h5-qst"/>
                 <constraint firstItem="aFM-mI-70j" firstAttribute="leading" secondItem="dzl-gQ-3QP" secondAttribute="trailing" constant="50" id="aTM-OX-gs4"/>
                 <constraint firstAttribute="centerX" secondItem="aFM-mI-70j" secondAttribute="centerX" constant="-75" id="kja-rj-887"/>

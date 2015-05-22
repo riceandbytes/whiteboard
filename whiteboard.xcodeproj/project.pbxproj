@@ -34,6 +34,8 @@
 		1446AA5E1B0D9C3B00A7E9E6 /* ExtraPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */; };
 		1446AA5F1B0D9C3B00A7E9E6 /* ExtraPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */; };
 		1446AA611B0DC92E00A7E9E6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1446AA601B0DC92E00A7E9E6 /* MessageUI.framework */; };
+		1446AA681B0F1B0300A7E9E6 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA671B0F1B0300A7E9E6 /* UIImage+Scale.m */; };
+		1446AA691B0F1B0300A7E9E6 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA671B0F1B0300A7E9E6 /* UIImage+Scale.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		1446AA5A1B0D950200A7E9E6 /* SpecialPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialPanelView.m; sourceTree = "<group>"; };
 		1446AA5D1B0D9C3B00A7E9E6 /* ExtraPanelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExtraPanelView.xib; path = res/Panels/ExtraPanelView.xib; sourceTree = "<group>"; };
 		1446AA601B0DC92E00A7E9E6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1446AA661B0F1B0300A7E9E6 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
+		1446AA671B0F1B0300A7E9E6 /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 				1446AA2D1B0C519C00A7E9E6 /* Config.h */,
 				1446AA2E1B0C519C00A7E9E6 /* Config.m */,
 				1446AA4B1B0D940800A7E9E6 /* Panels */,
+				1446AA661B0F1B0300A7E9E6 /* UIImage+Scale.h */,
+				1446AA671B0F1B0300A7E9E6 /* UIImage+Scale.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1446AA371B0C580300A7E9E6 /* ColorPanelView.m in Sources */,
+				1446AA681B0F1B0300A7E9E6 /* UIImage+Scale.m in Sources */,
 				1446AA5B1B0D950200A7E9E6 /* SpecialPanelView.m in Sources */,
 				1446AA2F1B0C519C00A7E9E6 /* Config.m in Sources */,
 				1446AA461B0C704000A7E9E6 /* ExtraPanelView.m in Sources */,
@@ -344,6 +351,7 @@
 				1446AA381B0C580300A7E9E6 /* ColorPanelView.m in Sources */,
 				1446AA341B0C579300A7E9E6 /* PanelView.m in Sources */,
 				1406E4921B0C48EF005D3E0C /* whiteboardTests.m in Sources */,
+				1446AA691B0F1B0300A7E9E6 /* UIImage+Scale.m in Sources */,
 				1446AA471B0C704000A7E9E6 /* ExtraPanelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

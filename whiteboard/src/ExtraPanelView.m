@@ -24,5 +24,8 @@
     [_delegate screenAndEmail];
 }
 
+- (IBAction)actionImageToEdit:(id)sender {
+    [_delegate importImage];
+}
 
 @end

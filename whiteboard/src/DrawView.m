@@ -8,6 +8,7 @@
 
 #import "DrawView.h"
 #import "Config.h"
+#import "UIImage+Scale.h"
 
 @interface DrawView () {
     CGPoint cpt;
@@ -221,8 +222,17 @@ CGPoint midPoint(CGPoint p1, CGPoint p2) {
     return CGPointMake((p1.x + p2.x)/2, (p1.y + p2.y)/2);
 }
 
-- (UIImage*) getSnapshop {
+- (UIImage*) getSnapshot {
     return snapshot;
+}
+
+- (void) setSnapshot: (UIImage*)image {
+    UIImage *adjust = [image imageScaledToSize:self.bounds.size];
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
+    [adjust drawAtPoint:CGPointZero];
+    snapshot = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self setNeedsDisplay];
 }
 
 @end

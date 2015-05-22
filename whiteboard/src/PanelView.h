@@ -16,6 +16,7 @@
 - (void) redo;
 - (void) undo;
 - (void) screenAndEmail;
+- (void) importImage;
 @end
 
 @interface PanelView : UIView {
