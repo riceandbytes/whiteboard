@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1406E4751B0C48EF005D3E0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406E4741B0C48EF005D3E0C /* main.m */; };
-		1406E4781B0C48EF005D3E0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406E4771B0C48EF005D3E0C /* AppDelegate.m */; };
 		1406E47B1B0C48EF005D3E0C /* whiteboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1406E4791B0C48EF005D3E0C /* whiteboard.xcdatamodeld */; };
-		1406E47E1B0C48EF005D3E0C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406E47D1B0C48EF005D3E0C /* MainViewController.m */; };
 		1406E4811B0C48EF005D3E0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1406E47F1B0C48EF005D3E0C /* Main.storyboard */; };
 		1406E4831B0C48EF005D3E0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1406E4821B0C48EF005D3E0C /* Images.xcassets */; };
 		1406E4861B0C48EF005D3E0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1406E4841B0C48EF005D3E0C /* LaunchScreen.xib */; };
@@ -36,6 +34,10 @@
 		1446AA611B0DC92E00A7E9E6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1446AA601B0DC92E00A7E9E6 /* MessageUI.framework */; };
 		1446AA681B0F1B0300A7E9E6 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA671B0F1B0300A7E9E6 /* UIImage+Scale.m */; };
 		1446AA691B0F1B0300A7E9E6 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA671B0F1B0300A7E9E6 /* UIImage+Scale.m */; };
+		1446AA6E1B0F1EBE00A7E9E6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA6A1B0F1EBE00A7E9E6 /* MainViewController.m */; };
+		1446AA6F1B0F1EBE00A7E9E6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA6A1B0F1EBE00A7E9E6 /* MainViewController.m */; };
+		1446AA701B0F1EBE00A7E9E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA6D1B0F1EBE00A7E9E6 /* AppDelegate.m */; };
+		1446AA711B0F1EBE00A7E9E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1446AA6D1B0F1EBE00A7E9E6 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +54,7 @@
 		1406E46F1B0C48EF005D3E0C /* whiteboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whiteboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1406E4731B0C48EF005D3E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1406E4741B0C48EF005D3E0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1406E4761B0C48EF005D3E0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		1406E4771B0C48EF005D3E0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		1406E47A1B0C48EF005D3E0C /* whiteboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = whiteboard.xcdatamodel; sourceTree = "<group>"; };
-		1406E47C1B0C48EF005D3E0C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
-		1406E47D1B0C48EF005D3E0C /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
 		1406E4801B0C48EF005D3E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1406E4821B0C48EF005D3E0C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1406E4851B0C48EF005D3E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -81,6 +79,10 @@
 		1446AA601B0DC92E00A7E9E6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1446AA661B0F1B0300A7E9E6 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		1446AA671B0F1B0300A7E9E6 /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
+		1446AA6A1B0F1EBE00A7E9E6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1446AA6B1B0F1EBE00A7E9E6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1446AA6C1B0F1EBE00A7E9E6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1446AA6D1B0F1EBE00A7E9E6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,10 +165,10 @@
 		1446AA241B0C4AD100A7E9E6 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				1406E4761B0C48EF005D3E0C /* AppDelegate.h */,
-				1406E4771B0C48EF005D3E0C /* AppDelegate.m */,
-				1406E47C1B0C48EF005D3E0C /* MainViewController.h */,
-				1406E47D1B0C48EF005D3E0C /* MainViewController.m */,
+				1446AA6A1B0F1EBE00A7E9E6 /* MainViewController.m */,
+				1446AA6B1B0F1EBE00A7E9E6 /* MainViewController.h */,
+				1446AA6C1B0F1EBE00A7E9E6 /* AppDelegate.h */,
+				1446AA6D1B0F1EBE00A7E9E6 /* AppDelegate.m */,
 				1446AA251B0C4AD100A7E9E6 /* DrawView.h */,
 				1446AA261B0C4AD100A7E9E6 /* DrawView.m */,
 				1446AA2D1B0C519C00A7E9E6 /* Config.h */,
@@ -327,15 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1446AA701B0F1EBE00A7E9E6 /* AppDelegate.m in Sources */,
 				1446AA371B0C580300A7E9E6 /* ColorPanelView.m in Sources */,
 				1446AA681B0F1B0300A7E9E6 /* UIImage+Scale.m in Sources */,
 				1446AA5B1B0D950200A7E9E6 /* SpecialPanelView.m in Sources */,
+				1446AA6E1B0F1EBE00A7E9E6 /* MainViewController.m in Sources */,
 				1446AA2F1B0C519C00A7E9E6 /* Config.m in Sources */,
 				1446AA461B0C704000A7E9E6 /* ExtraPanelView.m in Sources */,
 				1446AA331B0C579300A7E9E6 /* PanelView.m in Sources */,
-				1406E4781B0C48EF005D3E0C /* AppDelegate.m in Sources */,
 				1406E47B1B0C48EF005D3E0C /* whiteboard.xcdatamodeld in Sources */,
-				1406E47E1B0C48EF005D3E0C /* MainViewController.m in Sources */,
 				1406E4751B0C48EF005D3E0C /* main.m in Sources */,
 				1446AA271B0C4AD100A7E9E6 /* DrawView.m in Sources */,
 			);
@@ -349,6 +351,8 @@
 				1446AA5C1B0D950200A7E9E6 /* SpecialPanelView.m in Sources */,
 				1446AA281B0C4AD100A7E9E6 /* DrawView.m in Sources */,
 				1446AA381B0C580300A7E9E6 /* ColorPanelView.m in Sources */,
+				1446AA711B0F1EBE00A7E9E6 /* AppDelegate.m in Sources */,
+				1446AA6F1B0F1EBE00A7E9E6 /* MainViewController.m in Sources */,
 				1446AA341B0C579300A7E9E6 /* PanelView.m in Sources */,
 				1406E4921B0C48EF005D3E0C /* whiteboardTests.m in Sources */,
 				1446AA691B0F1B0300A7E9E6 /* UIImage+Scale.m in Sources */,
