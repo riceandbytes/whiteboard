@@ -54,8 +54,9 @@
     centerX = self.view.bounds.size.width / 2;
     
     CGRect rect = [[UIScreen mainScreen] bounds];
-    start = CGRectMake(-rect.size.width, rect.size.height/2,
-               rect.size.width, rect.size.height/2);
+    CGFloat height = rect.size.height/2;
+    start = CGRectMake(-rect.size.width, height,
+               rect.size.width, height);
     // shift view off screen
     
     panelView = [[PanelView alloc] initWithFrame:start];

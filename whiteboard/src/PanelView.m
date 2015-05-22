@@ -35,6 +35,14 @@
 
 - (void) setup: (CGRect)frame {
     
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth |
+                            UIViewAutoresizingFlexibleHeight |
+                            UIViewAutoresizingFlexibleBottomMargin |
+                            UIViewAutoresizingFlexibleLeftMargin |
+                            UIViewAutoresizingFlexibleRightMargin |
+                            UIViewAutoresizingFlexibleTopMargin |
+                            UIViewAutoresizingFlexibleBottomMargin;
+    
     currentIndex = 0;
     array = [NSMutableArray arrayWithCapacity:0];
     
