@@ -10,6 +10,8 @@
 	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</key>
+		<string>github.com:erikdoe/ocmock.git</string>
 		<key>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</key>
 		<string>https://github.com/riceandbytes/whiteboard.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>whiteboard.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</key>
+		<string>../..ocmock/</string>
 		<key>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</key>
 		<string>../..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ocmock</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
