@@ -22,9 +22,9 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>10265E242415D473A6A613214DB7AC3EE3D43F93</key>
-		<string>../..tools/KIF/</string>
+		<string>../..tools/KIF</string>
 		<key>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</key>
-		<string>../..ocmock/</string>
+		<string>../..ocmock</string>
 		<key>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</key>
 		<string>../..</string>
 	</dict>
@@ -48,17 +48,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</string>
+			<string>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ocmock</string>
+			<string>whiteboard</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</string>
+			<string>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</string>
 			<key>IDESourceControlWCCName</key>
-			<string>whiteboard</string>
+			<string>whiteboardocmock</string>
 		</dict>
 	</array>
 </dict>

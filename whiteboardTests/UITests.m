@@ -16,17 +16,26 @@
 @implementation UITests
 
 - (void)beforeEach {
-    [tester waitForTimeInterval:3];
+    [tester waitForTimeInterval:2];
 }
 
 - (void)afterEach {
 }
 
 - (void) testSwipe {
-    [tester tapViewWithAccessibilityLabel:@"Draw View"];
-    [tester swipeViewWithAccessibilityLabelFromLeftEdgeToRight:@"Draw View" value:nil traits:UIAccessibilityTraitNone inDirection:KIFSwipeDirectionRight];
-    [tester waitForTimeInterval:10];
-
+    NSString* dw = @"Draw View";
+    [tester tapViewWithAccessibilityLabel:dw];
+    
+    
+    [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionLeftEdgeToRight];
+    [tester waitForTimeInterval:2];
+    [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionLeftEdgeToRight];
+    [tester waitForTimeInterval:2];
+    [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionLeftEdgeToRight];
+    [tester waitForTimeInterval:2];
+    [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionRightEdgeToLeft];
+    [tester waitForTimeInterval:2];
+    
 //    [tester swipeViewWithAccessibilityIdentifier:@"Draw View" inDirection:KIFSwipeDirectionRight];
 //    [tester tapViewWithAccessibilityLabel:@"Delete"];
 
