@@ -22,5 +22,7 @@
 @interface PanelView : UIView {
 }
 @property (assign) id<PanelProtocol> delegate;
-- (void) nextView:(id<PanelProtocol>)del;
+- (void) nextView;
+- (void) prevView;
+- (void) setup;
 @end

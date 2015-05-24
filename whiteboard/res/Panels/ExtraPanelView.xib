@@ -55,6 +55,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpM-Di-SaY">
                     <rect key="frame" x="173" y="145" width="254" height="36"/>
+                    <accessibility key="accessibilityConfiguration" label="ExtraPanelView"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="254" id="6SN-VA-TKi"/>
                         <constraint firstAttribute="height" constant="36" id="ZtI-98-fTO"/>

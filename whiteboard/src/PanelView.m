@@ -13,7 +13,9 @@
     NSMutableArray* array;
     int currentIndex;
     id<PanelProtocol> _pdelegate;
-
+    
+    CGRect initialFrame;
+    CGRect hideFrame;
 }
 @end
 
@@ -21,10 +23,13 @@
 
 @synthesize delegate;
 
-- (id)initWithFrame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [self setup: frame];
+        initialFrame = frame;
+        hideFrame = CGRectMake(initialFrame.origin.x, initialFrame.origin.y + initialFrame.size.height,
+                               initialFrame.size.width, initialFrame.size.height);
+        self.frame = hideFrame;
     }
     return self;
 }
@@ -33,7 +38,12 @@
     NSLog(@"Panel View Dealloc");
 }
 
-- (void) setup: (CGRect)frame {
+- (void) setup {
+    self.hidden = YES;
+    UISwipeGestureRecognizer* swipeDown =
+        [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeDown:)];
+    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
+    [self addGestureRecognizer:swipeDown];
     
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth |
                             UIViewAutoresizingFlexibleHeight |
@@ -46,26 +56,74 @@
     currentIndex = 0;
     array = [NSMutableArray arrayWithCapacity:0];
     
-    NSArray *views = @[@"ColorPanelView", @"SpecialPanelView", @"ExtraPanelView"];
+    NSArray *views = @[@"SpecialPanelView", @"ColorPanelView", @"ExtraPanelView"];
     
     for (NSString* name in views) {
         PanelView* vc = [[[NSBundle mainBundle] loadNibNamed:name owner:self options:nil] firstObject];
-        [vc setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        [vc setFrame:CGRectMake(0, 0, initialFrame.size.width, initialFrame.size.height)];
+        vc.delegate = delegate;
         [array addObject:vc];
+        vc.hidden = YES;
+        [self addSubview:vc];
     }
 }
 
-- (void) nextView: (id<PanelProtocol>) del {
-    
-    [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
+- (void) nextView {
     PanelView* pv = [array objectAtIndex:currentIndex];
-    pv.delegate = del;
-    [self addSubview:pv];
+    pv.hidden = YES;
     
     ++currentIndex;
     if (currentIndex >= array.count) {
         currentIndex = 0;
     }
+    
+    pv = [array objectAtIndex:currentIndex];
+    pv.hidden = NO;
+    [self bringSubviewToFront:pv];
+
+    [self showView];
 }
+
+- (void) prevView {
+    
+    PanelView* pv = [array objectAtIndex:currentIndex];
+    pv.hidden = YES;
+    
+    --currentIndex;
+    if (currentIndex < 0) {
+        currentIndex = (int)array.count - 1;
+    }
+    
+    pv = [array objectAtIndex:currentIndex];
+    pv.hidden = NO;
+    [self bringSubviewToFront:pv];
+    
+    [self showView];
+}
+
+#pragma mark - Swipe Gesture
+
+/**
+    When we swipe down on the panel we close it
+ */
+- (void)handleSwipeDown:(UIGestureRecognizer*)recognizer {
+    [UIView animateWithDuration:2.0 animations:^{
+        self.frame = hideFrame;
+    } completion:^(BOOL finished) {
+        self.hidden = YES;
+    }];
+}
+
+#pragma mark - Helpers
+
+- (void) showView {
+    if (!self.isHidden) {
+        self.hidden = NO;
+        [UIView animateWithDuration:2.0 animations:^{
+            self.frame = initialFrame;
+        } completion:^(BOOL finished) {
+        }];
+    }
+}
+
 @end

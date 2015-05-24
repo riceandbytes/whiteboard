@@ -16,7 +16,6 @@
                                     MFMailComposeViewControllerDelegate,
                                     UIImagePickerControllerDelegate,
                                     UINavigationControllerDelegate> {
-    CGFloat centerX;
     PanelView* panelView;
     CGRect start;
     BOOL ignore;
@@ -51,16 +50,16 @@
     rightEdgeGesture.delegate = self;
     [self.view addGestureRecognizer:rightEdgeGesture];
     
-    centerX = self.view.bounds.size.width / 2;
-    
     CGRect rect = [[UIScreen mainScreen] bounds];
     CGFloat height = rect.size.height/2;
-    start = CGRectMake(-rect.size.width, height,
+    start = CGRectMake(0, height,
                rect.size.width, height);
-    // shift view off screen
     
     panelView = [[PanelView alloc] initWithFrame:start];
+    [panelView setDelegate:self];
+    [panelView setup];
     [panelView setBackgroundColor:[UIColor lightGrayColor]];
+    panelView.hidden = YES;
     [self.view addSubview:panelView];
 }
 
@@ -75,23 +74,17 @@
 
 - (void)handleLeftEdgeGesture:(UIScreenEdgePanGestureRecognizer *)gesture {
     
-    if(UIGestureRecognizerStateEnded == gesture.state) {        
-        [UIView animateWithDuration:.5 animations:^{
-            [panelView nextView:self];
-            panelView.center = CGPointMake(centerX, panelView.center.y);
-
-        }];
+    if(UIGestureRecognizerStateEnded == gesture.state) {
+        panelView.hidden = NO;
+        [panelView nextView];
     }
 }
 
 - (void)handleRightEdgeGesture:(UIScreenEdgePanGestureRecognizer *)gesture {
     
-    if(UIGestureRecognizerStateBegan == gesture.state ||
-       UIGestureRecognizerStateChanged == gesture.state) {
-        [UIView animateWithDuration:.5 animations:^{
-            
-            panelView.frame = start;
-        }];
+    if(UIGestureRecognizerStateEnded == gesture.state) {
+        panelView.hidden = NO;
+        [panelView prevView];
     }
 }
 
@@ -144,8 +137,6 @@
                permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     }
 }
-
-#pragma mark - Import Image
 
 #pragma mark - ImagePickerController Delegate
 
