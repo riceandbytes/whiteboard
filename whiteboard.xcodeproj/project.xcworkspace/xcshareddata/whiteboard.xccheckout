@@ -10,6 +10,8 @@
 	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>10265E242415D473A6A613214DB7AC3EE3D43F93</key>
+		<string>https://github.com/kif-framework/KIF.git</string>
 		<key>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</key>
 		<string>github.com:erikdoe/ocmock.git</string>
 		<key>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</key>
@@ -19,6 +21,8 @@
 	<string>whiteboard.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>10265E242415D473A6A613214DB7AC3EE3D43F93</key>
+		<string>../..tools/KIF/</string>
 		<key>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</key>
 		<string>../..ocmock/</string>
 		<key>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</key>
@@ -32,6 +36,14 @@
 	<string>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>10265E242415D473A6A613214DB7AC3EE3D43F93</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KIF</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
