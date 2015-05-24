@@ -29,6 +29,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c80-Qh-3lW">
                     <rect key="frame" x="242" y="307" width="50" height="50"/>
                     <color key="backgroundColor" red="0.27843138575553894" green="0.65490198135375977" blue="0.38823530077934265" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="greenColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Cnk-b6-RfC"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="o4U-8T-CBw"/>
@@ -103,6 +104,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vED-Ro-EsJ">
                     <rect key="frame" x="358" y="250" width="50" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.58823531866073608" blue="0.7764706015586853" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="blueColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="QoE-hc-qvK"/>
                         <constraint firstAttribute="width" constant="50" id="XvL-sz-cQc"/>
@@ -118,6 +120,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zv0-HZ-f7X">
                     <rect key="frame" x="184" y="307" width="50" height="50"/>
                     <color key="backgroundColor" red="1" green="0.2588235438" blue="0.2823529541" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="redColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="5th-bc-CDD"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="PdN-yJ-ZKF"/>

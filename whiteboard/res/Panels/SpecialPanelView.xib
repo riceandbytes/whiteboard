@@ -26,7 +26,7 @@
                 </button>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Qe3-gl-kAw">
                     <rect key="frame" x="18" y="97" width="564" height="31"/>
-                    <accessibility key="accessibilityConfiguration" label="SpecialPanelView"/>
+                    <accessibility key="accessibilityConfiguration" label="lineWidhtSlider"/>
                     <connections>
                         <action selector="actionLineWidthSlider:" destination="iN0-l3-epB" eventType="valueChanged" id="eTz-VP-sr1"/>
                     </connections>
@@ -59,6 +59,9 @@
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+            <accessibility key="accessibilityConfiguration" label="SpecialPanelView">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <constraints>
                 <constraint firstItem="Qe3-gl-kAw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="2NN-G8-k58"/>
                 <constraint firstItem="Qe3-gl-kAw" firstAttribute="top" secondItem="dWl-uS-M0n" secondAttribute="bottom" constant="8" id="5fo-hj-yZd"/>

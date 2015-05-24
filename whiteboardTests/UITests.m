@@ -9,36 +9,65 @@
 #import <UIKit/UIKit.h>
 #import <KIF/KIF.h>
 
-@interface UITests : KIFTestCase
-
+@interface UITests : KIFTestCase {
+    NSString* dw;
+    NSString* cpv;
+    NSString* pv;
+}
 @end
 
 @implementation UITests
 
+- (void) beforeAll {
+}
+
 - (void)beforeEach {
-    [tester waitForTimeInterval:2];
+    dw = @"Draw View";
+    cpv = @"ColorPanelView";
+    pv = @"PanelView";
+    
+    [tester waitForTimeInterval:1];
 }
 
 - (void)afterEach {
+
 }
 
 - (void) testSwipe {
-    NSString* dw = @"Draw View";
     [tester tapViewWithAccessibilityLabel:dw];
     
-    
-    [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionLeftEdgeToRight];
-    [tester waitForTimeInterval:2];
-    [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionLeftEdgeToRight];
-    [tester waitForTimeInterval:2];
-    [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionLeftEdgeToRight];
-    [tester waitForTimeInterval:2];
-    [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionRightEdgeToLeft];
-    [tester waitForTimeInterval:2];
-    
-//    [tester swipeViewWithAccessibilityIdentifier:@"Draw View" inDirection:KIFSwipeDirectionRight];
-//    [tester tapViewWithAccessibilityLabel:@"Delete"];
+    for (int x = 0; x < 4; x++) {
+        [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionLeftEdgeToRight];
+        [tester waitForTimeInterval:1];
+    }
 
+    for (int x = 0; x < 4; x++) {
+        [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionRightEdgeToLeft];
+        [tester waitForTimeInterval:1];
+    }
+    
+    [tester swipeViewWithAccessibilityLabel:pv inDirection:KIFSwipeDirectionDown];
+}
+
+- (void) testHidePanel {
+    [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionLeftEdgeToRight];
+    [tester waitForTimeInterval:2];
+    
+    UIView * view = [tester waitForViewWithAccessibilityLabel:pv];
+    XCTAssert(view.isHidden == NO, @"Pass");
+    
+    [tester swipeViewWithAccessibilityLabel:cpv inDirection:KIFSwipeDirectionDown];
+    [tester waitForTimeInterval:4];
+    XCTAssert(view.isHidden == YES, @"Pass");
+}
+
+- (void) testShowPanel {
+    [tester swipeViewWithAccessibilityLabel:dw inDirection:KIFSwipeDirectionLeftEdgeToRight];
+    [tester waitForTimeInterval:4];
+    
+    UIView * view = [tester waitForViewWithAccessibilityLabel:pv];
+    
+    XCTAssert(view.isHidden == NO, @"Pass");
 }
 
 @end

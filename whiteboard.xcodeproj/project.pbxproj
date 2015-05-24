@@ -14,6 +14,7 @@
 		1406E4861B0C48EF005D3E0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1406E4841B0C48EF005D3E0C /* LaunchScreen.xib */; };
 		1406E4921B0C48EF005D3E0C /* whiteboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406E4911B0C48EF005D3E0C /* whiteboardTests.m */; };
 		140A84281B11A1FE004F6CB2 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 140A841D1B11A1E2004F6CB2 /* libKIF.a */; };
+		140A842A1B11C512004F6CB2 /* UIDrawingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A84291B11C512004F6CB2 /* UIDrawingTests.m */; };
 		1424F4D71B106A96008CE924 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1424F4CB1B10691C008CE924 /* libOCMock.a */; };
 		1424F4D91B106B2D008CE924 /* DrawViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4D81B106B2D008CE924 /* DrawViewTests.m */; };
 		1424F4DB1B107766008CE924 /* MainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1424F4DA1B107766008CE924 /* MainViewControllerTests.m */; };
@@ -111,6 +112,7 @@
 		1406E4901B0C48EF005D3E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1406E4911B0C48EF005D3E0C /* whiteboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = whiteboardTests.m; sourceTree = "<group>"; };
 		140A84121B11A1E1004F6CB2 /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = KIF/KIF.xcodeproj; sourceTree = SOURCE_ROOT; };
+		140A84291B11C512004F6CB2 /* UIDrawingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDrawingTests.m; sourceTree = "<group>"; };
 		1424F4CB1B10691C008CE924 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = libs/ocmock/usr/lib/libOCMock.a; sourceTree = "<group>"; };
 		1424F4D81B106B2D008CE924 /* DrawViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewTests.m; sourceTree = "<group>"; };
 		1424F4DA1B107766008CE924 /* MainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTests.m; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				1424F4D81B106B2D008CE924 /* DrawViewTests.m */,
 				1424F4DA1B107766008CE924 /* MainViewControllerTests.m */,
 				1424F4FA1B1081A0008CE924 /* UITests.m */,
+				140A84291B11C512004F6CB2 /* UIDrawingTests.m */,
 			);
 			path = whiteboardTests;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				1446AA381B0C580300A7E9E6 /* ColorPanelView.m in Sources */,
 				1446AA711B0F1EBE00A7E9E6 /* AppDelegate.m in Sources */,
 				1446AA6F1B0F1EBE00A7E9E6 /* MainViewController.m in Sources */,
+				140A842A1B11C512004F6CB2 /* UIDrawingTests.m in Sources */,
 				1424F4DB1B107766008CE924 /* MainViewControllerTests.m in Sources */,
 				1446AA341B0C579300A7E9E6 /* PanelView.m in Sources */,
 				1406E4921B0C48EF005D3E0C /* whiteboardTests.m in Sources */,

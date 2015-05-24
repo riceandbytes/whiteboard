@@ -30,6 +30,8 @@
         hideFrame = CGRectMake(initialFrame.origin.x, initialFrame.origin.y + initialFrame.size.height,
                                initialFrame.size.width, initialFrame.size.height);
         self.frame = hideFrame;
+        
+        self.accessibilityLabel = @"PanelView";
     }
     return self;
 }
@@ -56,7 +58,7 @@
     currentIndex = 0;
     array = [NSMutableArray arrayWithCapacity:0];
     
-    NSArray *views = @[@"SpecialPanelView", @"ColorPanelView", @"ExtraPanelView"];
+    NSArray *views = @[@"ExtraPanelView", @"ColorPanelView", @"SpecialPanelView"];
     
     for (NSString* name in views) {
         PanelView* vc = [[[NSBundle mainBundle] loadNibNamed:name owner:self options:nil] firstObject];
