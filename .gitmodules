@@ -1,3 +1,6 @@
 [submodule "ocmock"]
 	path = ocmock
 	url = git@github.com:erikdoe/ocmock.git
+[submodule "KIF"]
+	path = KIF
+	url = https://github.com/riceandbytes/KIF.git
