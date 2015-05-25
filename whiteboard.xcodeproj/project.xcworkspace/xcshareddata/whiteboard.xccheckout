@@ -11,9 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>10265E242415D473A6A613214DB7AC3EE3D43F93</key>
-		<string>https://github.com/kif-framework/KIF.git</string>
-		<key>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</key>
-		<string>github.com:erikdoe/ocmock.git</string>
+		<string>https://github.com/riceandbytes/KIF.git</string>
 		<key>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</key>
 		<string>https://github.com/riceandbytes/whiteboard.git</string>
 	</dict>
@@ -22,9 +20,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>10265E242415D473A6A613214DB7AC3EE3D43F93</key>
-		<string>../..tools/KIF</string>
-		<key>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</key>
-		<string>../..ocmock</string>
+		<string>../..KIF/</string>
 		<key>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</key>
 		<string>../..</string>
 	</dict>
@@ -51,14 +47,6 @@
 			<string>FC29CD680636B9F952CBECA3D0545EDEF2AF75F9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>whiteboard</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E4BCE3AE6B24E41B9BCE312FF3B0B6CD0B8B8025</string>
-			<key>IDESourceControlWCCName</key>
-			<string>whiteboardocmock</string>
 		</dict>
 	</array>
 </dict>

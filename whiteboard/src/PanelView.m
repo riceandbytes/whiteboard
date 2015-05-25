@@ -13,9 +13,6 @@
     NSMutableArray* array;
     int currentIndex;
     id<PanelProtocol> _pdelegate;
-    
-    CGRect initialFrame;
-    CGRect hideFrame;
 }
 @end
 
@@ -26,11 +23,6 @@
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        initialFrame = frame;
-        hideFrame = CGRectMake(initialFrame.origin.x, initialFrame.origin.y + initialFrame.size.height,
-                               initialFrame.size.width, initialFrame.size.height);
-        self.frame = hideFrame;
-        
         self.accessibilityLabel = @"PanelView";
     }
     return self;
@@ -62,7 +54,7 @@
     
     for (NSString* name in views) {
         PanelView* vc = [[[NSBundle mainBundle] loadNibNamed:name owner:self options:nil] firstObject];
-        [vc setFrame:CGRectMake(0, 0, initialFrame.size.width, initialFrame.size.height)];
+        [vc setFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
         vc.delegate = delegate;
         [array addObject:vc];
         vc.hidden = YES;
@@ -109,7 +101,9 @@
     When we swipe down on the panel we close it
  */
 - (void)handleSwipeDown:(UIGestureRecognizer*)recognizer {
-    [UIView animateWithDuration:2.0 animations:^{
+    CGRect hideFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y + self.bounds.size.height,
+                           self.bounds.size.width, self.bounds.size.height);
+    [UIView animateWithDuration:1.0 animations:^{
         self.frame = hideFrame;
     } completion:^(BOOL finished) {
         self.hidden = YES;
@@ -121,8 +115,11 @@
 - (void) showView {
     if (!self.isHidden) {
         self.hidden = NO;
-        [UIView animateWithDuration:2.0 animations:^{
-            self.frame = initialFrame;
+        [UIView animateWithDuration:1.0 animations:^{
+            CGRect rect = [[UIScreen mainScreen] bounds];
+            self.frame = CGRectMake(self.frame.origin.x, rect.size.height/2,
+                                    self.bounds.size.width, self.bounds.size.height);
+            NSLog(@"Rect: %@", NSStringFromCGRect(self.frame));
         } completion:^(BOOL finished) {
         }];
     }
