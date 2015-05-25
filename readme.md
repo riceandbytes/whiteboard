@@ -10,5 +10,5 @@
 7. Change Alpha
 8. Draw on top of imported photo
 9. Support iOS and iPad
-10. Support rotations
+10. Support rotations (still need some work)
 
